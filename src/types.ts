@@ -3,5 +3,6 @@ export interface Song {
     band: string;
     name: string;
     youtubeId: string;
-    difficulty: string;
+	difficulty: string;
+	playPosition: number;
 }

@@ -4,55 +4,63 @@
         "band": "Pink Floyd",
         "name": "Comfortably Numb",
         "youtubeId": "x-xTttimcNk",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "playPosition": 50
     },
     {
         "id": 2,
         "band": "Pink Floyd",
         "name": "Wish You Were Here",
         "youtubeId": "IXdNnw99-Ic",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "playPosition": 50
     },
     {
         "id": 3,
         "band": "Queen",
         "name": "Bohemian Rhapsody",
         "youtubeId": "fJ9rUzIMcZQ",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "playPosition": 50
     },
     {
         "id": 4,
         "band": "Queen",
         "name": "Don't Stop Me Now",
         "youtubeId": "HgzGwKwLmgM",
-        "difficulty": "Medium"
+        "difficulty": "Medium",
+        "playPosition": 50
     },
     {
         "id": 5,
         "band": "Led Zeppelin",
         "name": "Stairway to Heaven",
         "youtubeId": "QkF3oxziUI4",
-        "difficulty": "Hard"
+        "difficulty": "Hard",
+        "playPosition": 50
     },
     {
         "id": 6,
         "band": "Led Zeppelin",
         "name": "Whole Lotta Love",
         "youtubeId": "HQmmM_qwG4k",
-        "difficulty": "Hard"
+        "difficulty": "Hard",
+        "playPosition": 50
     },
     {
         "id": 7,
         "band": "The Beatles",
         "name": "Hey Jude",
         "youtubeId": "A_MjCqQoLLA",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "playPosition": 50
     },
     {
         "id": 8,
         "band": "The Beatles",
         "name": "Let It Be",
         "youtubeId": "QDYfEBY9NM4",
-        "difficulty": "Easy"
+        "difficulty": "Easy",
+        "playPosition": 50
     }
 ]
