@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "band": "Pink Floyd",
+        "name": "Comfortably Numb",
+        "youtubeId": "x-xTttimcNk",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 2,
+        "band": "Pink Floyd",
+        "name": "Wish You Were Here",
+        "youtubeId": "IXdNnw99-Ic",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 3,
+        "band": "Queen",
+        "name": "Bohemian Rhapsody",
+        "youtubeId": "fJ9rUzIMcZQ",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 4,
+        "band": "Queen",
+        "name": "Don't Stop Me Now",
+        "youtubeId": "HgzGwKwLmgM",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 5,
+        "band": "Led Zeppelin",
+        "name": "Stairway to Heaven",
+        "youtubeId": "QkF3oxziUI4",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 6,
+        "band": "Led Zeppelin",
+        "name": "Whole Lotta Love",
+        "youtubeId": "HQmmM_qwG4k",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 7,
+        "band": "The Beatles",
+        "name": "Hey Jude",
+        "youtubeId": "A_MjCqQoLLA",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 8,
+        "band": "The Beatles",
+        "name": "Let It Be",
+        "youtubeId": "QDYfEBY9NM4",
+        "difficulty": "Easy"
+    }
+]
