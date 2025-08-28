@@ -3,7 +3,7 @@
         "id": 1,
         "band": "Pink Floyd",
         "name": "Comfortably Numb",
-        "youtubeId": "x-xTttimcNk",
+        "youtubeId": "_FrOQC-zEog",
         "difficulty": "Easy",
         "playPosition": 50
     },
@@ -11,17 +11,82 @@
         "id": 2,
         "band": "Pink Floyd",
         "name": "Wish You Were Here",
-        "youtubeId": "IXdNnw99-Ic",
+        "youtubeId": "jxTXV4J4eUY",
         "difficulty": "Easy",
-        "playPosition": 50
+        "playPosition": 100
     },
+    {
+        "id": 9,
+        "band": "Pink Floyd",
+        "name": "Another Brick in the Wall",
+        "youtubeId": "34ZmKbe5oG4",
+        "difficulty": "Easy",
+        "playPosition": 10
+    },
+    {
+        "id": 10,
+        "band": "Pink Floyd",
+        "name": "Money",
+        "youtubeId": "2aW7HweAf3o",
+        "difficulty": "Easy",
+        "playPosition": 150
+    },
+    {
+        "id": 11,
+        "band": "Pink Floyd",
+        "name": "Time",
+        "youtubeId": "-EzURpTF5c8",
+        "difficulty": "Medium",
+        "playPosition": 180
+    },
+    {
+        "id": 12,
+        "band": "Pink Floyd",
+        "name": "Shine On You Crazy Diamond",
+        "youtubeId": "cWGE9Gi0bB0",
+        "difficulty": "Medium",
+        "playPosition": 249
+    },
+    {
+        "id": 13,
+        "band": "Pink Floyd",
+        "name": "Echoes",
+        "youtubeId": "OcDiOUQBFd4",
+        "difficulty": "Medium",
+        "playPosition": 565
+    },
+    {
+        "id": 14,
+        "band": "Pink Floyd",
+        "name": "Dogs",
+        "youtubeId": "9lgOo8yEIPs",
+        "difficulty": "Hard",
+        "playPosition": 480
+    },
+    {
+        "id": 15,
+        "band": "Pink Floyd",
+        "name": "Pigs (Three Different Ones)",
+        "youtubeId": "gOqblSqx_VI",
+        "difficulty": "Hard",
+        "playPosition": 190
+    },
+    {
+        "id": 16,
+        "band": "Pink Floyd",
+        "name": "Marooned",
+        "youtubeId": "P7YMI39sObY",
+        "difficulty": "Hard",
+        "playPosition": 140
+    },
+
     {
         "id": 3,
         "band": "Queen",
         "name": "Bohemian Rhapsody",
         "youtubeId": "fJ9rUzIMcZQ",
         "difficulty": "Medium",
-        "playPosition": 50
+        "playPosition": 165
     },
     {
         "id": 4,
@@ -29,15 +94,80 @@
         "name": "Don't Stop Me Now",
         "youtubeId": "HgzGwKwLmgM",
         "difficulty": "Medium",
+        "playPosition": 85
+    },
+    {
+        "id": 17,
+        "band": "Queen",
+        "name": "We Will Rock You",
+        "youtubeId": "-tJYN-eG1zk",
+        "difficulty": "Easy",
+        "playPosition": 40
+    },
+    {
+        "id": 18,
+        "band": "Queen",
+        "name": "Another One Bites the Dust",
+        "youtubeId": "rY0WxgSXdEE",
+        "difficulty": "Easy",
+        "playPosition": 80
+    },
+    {
+        "id": 19,
+        "band": "Queen",
+        "name": "I Want to Break Free",
+        "youtubeId": "f4Mc-NYPHaQ",
+        "difficulty": "Easy",
         "playPosition": 50
     },
+    {
+        "id": 20,
+        "band": "Queen",
+        "name": "Somebody to Love",
+        "youtubeId": "kijpcUv-b8M",
+        "difficulty": "Easy",
+        "playPosition": 120
+    },
+    {
+        "id": 21,
+        "band": "Queen",
+        "name": "Killer Queen",
+        "youtubeId": "2ZBtPf7w4bY",
+        "difficulty": "Medium",
+        "playPosition": 57
+    },
+    {
+        "id": 22,
+        "band": "Queen",
+        "name": "The Show Must Go On",
+        "youtubeId": "t99KH0TR-J4",
+        "difficulty": "Hard",
+        "playPosition": 80
+    },
+    {
+        "id": 23,
+        "band": "Queen",
+        "name": "Under Pressure",
+        "youtubeId": "a01QQZcl_Lc",
+        "difficulty": "Hard",
+        "playPosition": 50
+    },
+    {
+        "id": 24,
+        "band": "Queen",
+        "name": "Radio Ga Ga",
+        "youtubeId": "azdwsXLmrHE",
+        "difficulty": "Hard",
+        "playPosition": 70
+    },
+
     {
         "id": 5,
         "band": "Led Zeppelin",
         "name": "Stairway to Heaven",
         "youtubeId": "QkF3oxziUI4",
         "difficulty": "Hard",
-        "playPosition": 50
+        "playPosition": 240
     },
     {
         "id": 6,
@@ -45,22 +175,151 @@
         "name": "Whole Lotta Love",
         "youtubeId": "HQmmM_qwG4k",
         "difficulty": "Hard",
-        "playPosition": 50
+        "playPosition": 142
     },
+    {
+        "id": 25,
+        "band": "Led Zeppelin",
+        "name": "Immigrant Song",
+        "youtubeId": "y8OtzJFIkN0",
+        "difficulty": "Easy",
+        "playPosition": 35
+    },
+    {
+        "id": 26,
+        "band": "Led Zeppelin",
+        "name": "Black Dog",
+        "youtubeId": "6tlSx0jkueo",
+        "difficulty": "Easy",
+        "playPosition": 60
+    },
+    {
+        "id": 27,
+        "band": "Led Zeppelin",
+        "name": "Good Times Bad Times",
+        "youtubeId": "CmSNUo2t1gc",
+        "difficulty": "Easy",
+        "playPosition": 35
+    },
+    {
+        "id": 28,
+        "band": "Led Zeppelin",
+        "name": "Ramble On",
+        "youtubeId": "a3HemKGDavw",
+        "difficulty": "Easy",
+        "playPosition": 80
+    },
+    {
+        "id": 29,
+        "band": "Led Zeppelin",
+        "name": "Kashmir",
+        "youtubeId": "sfR_H-p_n3o",
+        "difficulty": "Medium",
+        "playPosition": 240
+    },
+    {
+        "id": 30,
+        "band": "Led Zeppelin",
+        "name": "Heartbreaker",
+        "youtubeId": "1t24_w_96wI",
+        "difficulty": "Medium",
+        "playPosition": 10
+    },
+    {
+        "id": 31,
+        "band": "Led Zeppelin",
+        "name": "Since I've Been Loving You",
+        "youtubeId": "N_lSJ-0Gl7Q",
+        "difficulty": "Medium",
+        "playPosition": 196
+    },
+    {
+        "id": 32,
+        "band": "Led Zeppelin",
+        "name": "Achilles Last Stand",
+        "youtubeId": "p6S9n5l6_pM",
+        "difficulty": "Hard",
+        "playPosition": 506
+    },
+
     {
         "id": 7,
         "band": "The Beatles",
         "name": "Hey Jude",
         "youtubeId": "A_MjCqQoLLA",
         "difficulty": "Easy",
-        "playPosition": 50
+        "playPosition": 300
     },
     {
         "id": 8,
         "band": "The Beatles",
-        "name": "Let It Be",
-        "youtubeId": "QDYfEBY9NM4",
+        "name": "Across The Universe",
+        "youtubeId": "we0tO0LxY8Y",
+        "difficulty": "Hard",
+        "playPosition": 130
+    },
+    {
+        "id": 33,
+        "band": "The Beatles",
+        "name": "Yesterday",
+        "youtubeId": "NrgmdOz227I",
+        "difficulty": "Easy",
+        "playPosition": 25
+    },
+    {
+        "id": 34,
+        "band": "The Beatles",
+        "name": "Come Together",
+        "youtubeId": "45cYwDMibGo",
         "difficulty": "Easy",
         "playPosition": 50
+    },
+    {
+        "id": 35,
+        "band": "The Beatles",
+        "name": "A Day in the Life",
+        "youtubeId": "usNsCeOV4GM",
+        "difficulty": "Medium",
+        "playPosition": 70
+    },
+    {
+        "id": 36,
+        "band": "The Beatles",
+        "name": "Strawberry Fields Forever",
+        "youtubeId": "HtUH9z_Oey8",
+        "difficulty": "Medium",
+        "playPosition": 140
+    },
+    {
+        "id": 37,
+        "band": "The Beatles",
+        "name": "While My Guitar Gently Weeps",
+        "youtubeId": "YFDg-pgE0Hk",
+        "difficulty": "Medium",
+        "playPosition": 125
+    },
+    {
+        "id": 38,
+        "band": "The Beatles",
+        "name": "Helter Skelter",
+        "youtubeId": "vWW2SzoAXMo",
+        "difficulty": "Hard",
+        "playPosition": 138
+    },
+    {
+        "id": 39,
+        "band": "The Beatles",
+        "name": "I Am the Walrus",
+        "youtubeId": "t1Jm5epJr10",
+        "difficulty": "Hard",
+        "playPosition": 120
+    },
+    {
+        "id": 40,
+        "band": "The Beatles",
+        "name": "Tomorrow Never Knows",
+        "youtubeId": "pHNbHn3i9S4",
+        "difficulty": "Hard",
+        "playPosition": 85
     }
 ]
