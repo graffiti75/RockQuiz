@@ -7,14 +7,12 @@ import { Song } from '../types';
 interface QuizProps {
   settings: {
     band: string;
-    difficulty: string;
-    mode: string;
   };
   onBack: () => void;
 }
 
 const Quiz: React.FC<QuizProps> = ({ settings, onBack }) => {
-  const { band, difficulty, mode } = settings;
+  const { band } = settings;
   const [questions, setQuestions] = useState<Song[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
@@ -22,13 +20,12 @@ const Quiz: React.FC<QuizProps> = ({ settings, onBack }) => {
 
   useEffect(() => {
     const filteredSongs: Song[] = songs.filter(
-      (song) => song.band === band && song.difficulty === difficulty
+      (song) => song.band === band
     );
-
-    const numberOfQuestions = mode === 'quick' ? 5 : 10;
+    
     const shuffledSongs = filteredSongs.sort(() => 0.5 - Math.random());
-    setQuestions(shuffledSongs.slice(0, numberOfQuestions));
-  }, [band, difficulty, mode]);
+    setQuestions(shuffledSongs);
+  }, [band]);
 
   const handleAnswer = (isCorrect: boolean) => {
     if (isCorrect) {
@@ -48,10 +45,12 @@ const Quiz: React.FC<QuizProps> = ({ settings, onBack }) => {
 
   if (isQuizOver) {
     return (
-      <div>
-        <h2>Quiz Over!</h2>
-        <p>Your final score is: {score}</p>
-        <button onClick={handlePlayAgain}>Play Again</button>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-4">Quiz Over!</h2>
+        <p className="text-xl mb-6">Your final score is: {score}</p>
+        <button onClick={handlePlayAgain} className="py-2 px-6 bg-indigo-600 hover:bg-indigo-700 rounded-md text-white font-bold transition duration-300">
+          Play Again
+        </button>
       </div>
     );
   }

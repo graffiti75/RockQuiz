@@ -17,24 +17,28 @@ declare global {
 const Question: React.FC<QuestionProps> = ({ song, onAnswer }) => {
   const [userAnswer, setUserAnswer] = useState<string>('');
   const [isPlayerReady, setIsPlayerReady] = useState<boolean>(false);
+  const [isPlayerFullyLoaded, setIsPlayerFullyLoaded] = useState<boolean>(false);
   const playerRef = useRef<any>(null);
-  const playerContainerId = `player-${song.id}`; // Ensure unique ID for the div
+  const playerContainerId = `player-${song.id}`;
 
   useEffect(() => {
-    console.log(`[Effect] Running for song: "${song.name}" (ID: ${song.id})`);
-
     const onPlayerReady = () => {
-      console.log(`[Player] Player is READY for song: "${song.name}"`);
       setIsPlayerReady(true);
+    };
+
+    const onPlayerStateChange = (event: any) => {
+      // When the player has loaded the video data, it's fully ready
+      if (event.data === window.YT.PlayerState.CUED || event.data === window.YT.PlayerState.PAUSED) {
+        setIsPlayerFullyLoaded(true);
+      }
     };
     
     const setupPlayer = () => {
-        console.log(`[Setup] Destroying old player if it exists.`);
         if (playerRef.current) {
             playerRef.current.destroy();
         }
         setIsPlayerReady(false);
-        console.log(`[Setup] Creating new player for videoId: ${song.youtubeId} in div #${playerContainerId}`);
+        setIsPlayerFullyLoaded(false);
         playerRef.current = new window.YT.Player(playerContainerId, {
             height: '0',
             width: '0',
@@ -44,23 +48,18 @@ const Question: React.FC<QuestionProps> = ({ song, onAnswer }) => {
             },
             events: {
                 'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
             },
         });
     };
 
     if (!window.YT || !window.YT.Player) {
-      console.log('[API] YouTube API not ready. Setting global callback.');
-      // If the API is not ready, set the global callback
-      // which will be triggered by the script loaded in index.html
       window.onYouTubeIframeAPIReady = setupPlayer;
     } else {
-      console.log('[API] YouTube API is ready. Setting up player directly.');
-      // If API is already ready, just set up the player.
       setupPlayer();
     }
 
     return () => {
-      console.log(`[Effect Cleanup] Cleaning up for song: "${song.name}"`);
       if (playerRef.current) {
         playerRef.current.destroy();
       }
@@ -68,23 +67,25 @@ const Question: React.FC<QuestionProps> = ({ song, onAnswer }) => {
   }, [song.id, playerContainerId]);
 
   const handlePlaySnippet = () => {
-    console.log('[handlePlaySnippet] Clicked!');
-    const conditions = {
-        playerExists: !!playerRef.current,
-        playerIsReady: isPlayerReady,
-        loadMethodExists: !!(playerRef.current && playerRef.current.loadVideoById),
-    };
-    console.log('[handlePlaySnippet] Checking conditions:', conditions);
-
-    if (conditions.playerExists && conditions.playerIsReady && conditions.loadMethodExists) {
-      console.log(`[handlePlaySnippet] Conditions met. Calling loadVideoById with startSeconds: ${song.playPosition}`);
-      playerRef.current.loadVideoById({
-        videoId: song.youtubeId,
-        startSeconds: song.playPosition,
-        endSeconds: song.playPosition + 1,
-      });
-    } else {
-        console.error('[handlePlaySnippet] Conditions NOT met. Playback prevented.');
+    if (playerRef.current && isPlayerReady && playerRef.current.seekTo && playerRef.current.playVideo) {
+      // First, seek to the position
+      playerRef.current.seekTo(song.playPosition, true);
+      
+      // Wait a bit longer for the seek to complete, especially on first play
+      const delay = isPlayerFullyLoaded ? 150 : 500;
+      
+      setTimeout(() => {
+        if (playerRef.current) {
+          playerRef.current.playVideo();
+          
+          // Pause after 1 second of playback
+          setTimeout(() => {
+            if (playerRef.current && playerRef.current.pauseVideo) {
+              playerRef.current.pauseVideo();
+            }
+          }, 1000);
+        }
+      }, delay);
     }
   };
 
@@ -103,7 +104,11 @@ const Question: React.FC<QuestionProps> = ({ song, onAnswer }) => {
         className="w-64 h-64 object-cover rounded-lg shadow-md mb-6"
       />
       <div id={playerContainerId}></div>
-      <button onClick={handlePlaySnippet} disabled={!isPlayerReady} className="mb-4 py-2 px-4 bg-green-600 hover:bg-green-700 rounded-md text-white font-bold text-lg transition duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed">
+      <button 
+        onClick={handlePlaySnippet} 
+        disabled={!isPlayerReady} 
+        className="mb-4 py-2 px-4 bg-green-600 hover:bg-green-700 rounded-md text-white font-bold text-lg transition duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed"
+      >
         Play Snippet
       </button>
       <form onSubmit={handleSubmit} className="w-full max-w-sm">

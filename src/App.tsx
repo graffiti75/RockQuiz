@@ -4,8 +4,6 @@ import Quiz from './components/Quiz';
 
 interface QuizSettings {
   band: string;
-  difficulty: string;
-  mode: string;
 }
 
 function App() {
