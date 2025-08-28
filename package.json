@@ -1,14 +1,17 @@
 {
-    "name": "youtube-music-quiz",
+    "name": "rockquiz",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://graffiti75.github.io/RockQuiz",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint:check": "prettier --check .",
         "lint:fix": "prettier --write .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "react": "^19.1.1",
@@ -26,9 +29,10 @@
         "eslint-plugin-react-refresh": "^0.4.20",
         "globals": "^16.3.0",
         "postcss": "^8.4.38",
-        "prettier": "^3.6.2",
+        "prettier": "^3.2.5",
         "tailwindcss": "^3.4.1",
         "typescript": "^5.4.5",
-        "vite": "^7.1.2"
+        "vite": "^7.1.2",
+        "gh-pages": "^6.1.1"
     }
 }
